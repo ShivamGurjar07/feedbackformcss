@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            background: linear-gradient(to bottom right, red, #dbf1f2);   
+            height: 100vh; 
+            margin: 0;
+        }
+        form{
+            padding: 10px;
+            width: 400px;
+            border-radius: 10px;
+            background: rgb(231, 219, 219);
+        }
+        .submit {
+            text-align: center; 
+            align-content: center; 
+            background-color: green;
+            display: block; 
+            margin: 0 auto; 
+            padding: 10px 20px; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+}
+        
+        label.heading{
+            font-weight: 700;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input.textarea{
+            border: 0ch solid black; 
+            border-radius: 3px;
+            width: 100%;
+            box-sizing: border-box; 
+            margin-bottom: 10px;
+            margin: auto;
+            padding: 10px;
+        }
+        h2.feed{
+            text-align: center;
+        }
+        select.textarea {
+            width: 100%; /* Ensures the select element takes full width of its container */
+            padding: 8px; /* Adjust the padding as needed */
+            box-sizing: border-box; /* Includes padding and border in the element's width */
+            margin-bottom: 10px; /* Optional, for spacing below the select */
+            border: 1px solid #ccc; /* Optional, for a visible border */
+            border-radius: 4px; /* Optional, for rounded corners */
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="feed">Feedback Form</h2>
+    <form>
+        <label class="heading" for="text">Feedback Type:</label><br>
+        <select class="textarea" id="feedback" name="feedback">
+            <option value="compliment">compliment</option>
+            <option value="Informal">Informal</option>
+            <option value="Recognition">Recognition</option>
+            <option value="Appreciation">Appreciation</option>
+            <option value="Negative feedback">Negative feedback</option>
+        </select><br><br>
+
+        <label class="heading" for="message">Message:</label><br>
+        <input class="textarea" type="text" id="text" name="text" max="1000" resize="vertical" placeholder="Enter your Text"><br><br>
+        
+        <label class="heading">Website Rating:</label><br>
+        <input type="radio" id="excellent" name="rating" value="excellent">
+        <label for="excellent">Excellent</label>
+        <input type="radio" id="good" name="rating" value="good">
+        <label for="good">Good</label>
+        <input type="radio" id="average" name="rating" value="average">
+        <label for="average">Average</label>
+        <input type="radio" id="poor" name="rating" value="poor">
+        <label for="poor">Poor</label><br><br>
+
+        <label class="heading" for="age">Age(10-100):</label><br>
+        <input class="textarea" type="age" id="age" name="age" min='10' max="100" placeholder=" Enter the age"><br><br>
+
+        <label class="heading" for="email">Email:</label><br>
+        <input class="textarea" id="email" type="email" placeholder="Enter the email" required><br><br>
+
+        <label class="heading" for="password">Password(min 8 charecters):</label><br>
+        <input class="textarea" type="password" id="password" name="password" min='8' max="50" placeholder=" Enter the password"><br><br>
+
+        <label class="heading" for="url">Website Url(Optional):</label><br>
+        <input class="textarea" type="url" id="url" name="url" placeholder="Enter url"><br><br>
+        
+        <input type="checkbox" id="checkbox" name="checkbox" required>
+        <label class="heading" for="terms">I agree to the terms and condition</label><br><br>
+
+        <input class="submit" type="submit"  value="Submit">
+    </form>
+    </div>
+    
+</body>
+</html>
