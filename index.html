@@ -6,10 +6,12 @@
     <title>Feedback Form</title>
     <style>
         body{
+            height: 100%;
+            /* background-color: radial-gradient(circle,rgb(120, 190, 255)0% rgb(255, 0, 0)) ; */
             display: flex;
             justify-content: center;
             align-items: start;
-            background: linear-gradient(to bottom right, red, #dbf1f2);   
+            background: linear-gradient(to  bottom right, red, #a4a4f4);  
             height: 100vh; 
             margin: 0;
         }
@@ -18,6 +20,7 @@
             width: 400px;
             border-radius: 10px;
             background: rgb(231, 219, 219);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
         .submit {
             text-align: center; 
@@ -28,9 +31,7 @@
             padding: 10px 20px; 
             color: white; 
             border: none; 
-            border-radius: 5px; 
-}
-        
+            border-radius: 5px;         }
         label.heading{
             font-weight: 700;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -48,14 +49,30 @@
             text-align: center;
         }
         select.textarea {
-            width: 100%; /* Ensures the select element takes full width of its container */
-            padding: 8px; /* Adjust the padding as needed */
-            box-sizing: border-box; /* Includes padding and border in the element's width */
-            margin-bottom: 10px; /* Optional, for spacing below the select */
-            border: 1px solid #ccc; /* Optional, for a visible border */
-            border-radius: 4px; /* Optional, for rounded corners */
+            width: 100%; 
+            padding: 8px; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
 }
-
+        .text-area{
+            width: 100%;
+            height: 90px;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        span{
+            color: red;
+                font-weight: bold;
+        }
+        label.heading.radio{
+            margin-bottom: 15px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
@@ -72,9 +89,10 @@
         </select><br><br>
 
         <label class="heading" for="message">Message:</label><br>
-        <input class="textarea" type="text" id="text" name="text" max="1000" resize="vertical" placeholder="Enter your Text"><br><br>
+        <textarea class="text-area" placeholder="Enter your Text"></textarea><br><br>
         
         <label class="heading">Website Rating:</label><br>
+        <div class="radio">
         <input type="radio" id="excellent" name="rating" value="excellent">
         <label for="excellent">Excellent</label>
         <input type="radio" id="good" name="rating" value="good">
@@ -83,11 +101,13 @@
         <label for="average">Average</label>
         <input type="radio" id="poor" name="rating" value="poor">
         <label for="poor">Poor</label><br><br>
+        </div>
+        
 
         <label class="heading" for="age">Age(10-100):</label><br>
         <input class="textarea" type="age" id="age" name="age" min='10' max="100" placeholder=" Enter the age"><br><br>
 
-        <label class="heading" for="email">Email:</label><br>
+        <label class="heading" for="email">Email<span>*</span>:</label><br>
         <input class="textarea" id="email" type="email" placeholder="Enter the email" required><br><br>
 
         <label class="heading" for="password">Password(min 8 charecters):</label><br>
